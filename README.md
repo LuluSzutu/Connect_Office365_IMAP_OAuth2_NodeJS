@@ -21,7 +21,7 @@ The official instructions offered by microsoft can be found in here: [https://le
 
 To be able to setup the client credential, you must have permission to manage applications, and login to Azure Active Directory (Azure AD). This means you must have an <b>Administrator</b> or <b>Application Developer</b> roles for Microsoft Azure Portal. 
 
-###1.1 Register application and grant API permissions.
+### 1.1 Register application and grant API permissions.
 1. Sign in to the Azure portal.
 2. Select Azure Active Directory. 
 3. Under Manage, select App registrations > New registration.
@@ -32,7 +32,7 @@ To be able to setup the client credential, you must have permission to manage ap
 8. Under Manage, select API permissions > Add a permission, select APIs my organization users, searching for office 365 Exchange Online, then choose for Application permissions, then searching for IMAP, when find it, check the IMAP.AccessAsApp, and then Add permission. 
 9. Under API permissions pa, click the line 'Grant admin consent for [username]'
 
-###1.2 Register service principals in Exchange
+### 1.2 Register service principals in Exchange
 1. On a PC computer, open powershell and run as administrator. 
 2. Type the following commands:
 
@@ -50,7 +50,7 @@ Add-MailboxPermission -Identify "your-email-address" -User $MyApp.objectId -Acce
 
 ## 2. Read emails via IMAP module using Oauth2 and NodeJS
 
-###2.1 Get accesstoken from outlook 365
+### 2.1 Get accesstoken from outlook 365
 
 ```dash
 const msal = require("@azure/msal-node");
@@ -101,7 +101,7 @@ const msal = require("@azure/msal-node");
   const tokenResponse = await cca.acquireTokenByClientCredential(tokenRequest);
 ```
   
-###2.2 Generate Oauth2 token
+### 2.2 Generate Oauth2 token
   
 ```dash
   var xoauth2_format = '';
@@ -135,7 +135,7 @@ C: A01 AUTHENTICATE XOAUTH2 dXNlcj1zb21ldXNlckBleGFtcGxlLmNvbQFhdXRoPUJlYXJlciB5
 S: A01 OK AUTHENTICATE completed.
 ```
 
-###2.3 Read email using node-imap module with oauth2
+### 2.3 Read email using node-imap module with oauth2
 
 ```dash
 const Imap = require('node-imap'), inspect = require('util').inspect;
