@@ -30,7 +30,7 @@ To be able to setup the client credential, you must have permission to manage ap
 6. Add a new client secret with Description and Expire date. Reminber the Description, you will need it later as [appname]. 
 7. After generating the new client secret, you will see the Value and SecretID, copy the <b>Value</b>, you will need this for your NodeJS code as [clientSecret]. 
 8. Under Manage, select API permissions > Add a permission, select APIs my organization users, searching for office 365 Exchange Online, then choose for Application permissions, then searching for IMAP, when find it, check the IMAP.AccessAsApp, and then Add permission. 
-9. Under API permissions pa, click the line 'Grant admin consent for [username]'
+9. Under API permissions, click the line 'Grant admin consent for [username]'
 
 ### 1.2 Register service principals in Exchange
 1. On a PC computer, open powershell and run as administrator. 
